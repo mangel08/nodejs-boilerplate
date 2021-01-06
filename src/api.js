@@ -1,10 +1,7 @@
-'use strict'
-
 /* Global imports */
 import express from 'express';
 import bodyParser from 'body-parser';
-import cors from 'cors';
-
+import cors from './config/cors'
 /* Config vars */
 const api = express();
 
@@ -14,7 +11,7 @@ api.use(bodyParser.json());
 api.use(cors);
 
 api.get("/", (req, res) => {
-    res.send("Hola Mundo");
+    res.status(200).send("Hola Mundo");
 });
 
 export default api;
