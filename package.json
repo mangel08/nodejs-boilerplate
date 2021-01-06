@@ -1,0 +1,50 @@
+{
+    "name": "nodejs-boilerplate",
+    "version": "1.0.0",
+    "description": "Nodejs Boilerplate Project",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm run build && DEBUG=nodejs-boilerplate:* NODE_ENV=production node ./build/index.js",
+        "prod": "DEBUG=nodejs-boilerplate:* NODE_ENV=production node ./build/index.js",
+        "dev": "DEBUG=nodejs-boilerplate:* NODE_ENV=development nodemon ./src/index.js --exec babel-node",
+        "build": "npm run clean && npm run build-babel",
+        "build-babel": "babel -d ./build ./src -s",
+        "clean": "rm -rf build && mkdir build",
+        "lint": "standard"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mangel08/nodejs-boilerplate.git"
+    },
+    "keywords": [
+        "nodejs",
+        "express",
+        "javascript",
+        "backend"
+    ],
+    "author": "Miguelangel Palma <mangel.2711@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mangel08/nodejs-boilerplate/issues"
+    },
+    "homepage": "https://github.com/mangel08/nodejs-boilerplate#readme",
+    "dependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-es2015": "^6.24.1",
+        "bcrypt-nodejs": "0.0.3",
+        "body-parser": "^1.19.0",
+        "chalk": "^4.1.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-jwt-permissions": "^1.3.3",
+        "moment": "^2.29.1",
+        "mongodb": "^3.6.3",
+        "mongoose": "^5.11.10",
+        "mongoose-unique-validator": "^2.0.3"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6",
+        "standard": "^16.0.3"
+    }
+}
