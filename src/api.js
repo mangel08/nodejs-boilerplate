@@ -2,6 +2,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from './config/cors'
+
 /* Config vars */
 const api = express();
 
