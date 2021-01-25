@@ -4,7 +4,7 @@ import dotenv from "dotenv"
 dotenv.config()
 
 const connect = () => {
-  mongoose.connect("mongodb://localhost/test", { useNewUrlParser: true, useUnifiedTopology: true })
+  mongoose.connect(process.env.DB_HOST, { useNewUrlParser: true, useUnifiedTopology: true })
 }
 
 const db = mongoose.connection
